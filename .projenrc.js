@@ -1,17 +1,55 @@
-const { ConstructLibraryCdktf } = require('projen');
+const { ConstructLibraryCdktf, DependenciesUpgradeMechanism } = require('projen');
+description = 'Construct a CDK tf';
 const project = new ConstructLibraryCdktf({
   author: 'Neil Kuan',
   authorAddress: 'guan840912@gmail.com',
   cdktfVersion: '0.5.0',
   defaultReleaseBranch: 'main',
   name: 'cdktf-gitlab-runner',
+  keywords: ['cdktf', 'gitlab', 'runner'],
   repositoryUrl: 'https://github.com/neilkuan/cdktf-gitlab-runner.git',
-
-  // deps: [],                          /* Runtime dependencies of this module. */
-  // description: undefined,            /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],                       /* Build dependencies for this module. */
-  // packageName: undefined,            /* The "name" in package.json. */
-  // projectType: ProjectType.UNKNOWN,  /* Which type of project this is (library/app). */
-  // release: undefined,                /* Add release management to this project. */
+  deps: [
+    '@cdktf/provider-google',
+  ],
+  description,
+  catalog: {
+    twitter: 'neil_kuan',
+    announce: false,
+  },
+  release: true,
+  autoDetectBin: false,
+  depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+    ignoreProjen: false,
+    workflowOptions: {
+      labels: ['auto-approve'],
+      secret: 'AUTOMATION_GITHUB_TOKEN',
+    },
+  }),
+  autoApproveOptions: {
+    secret: 'GITHUB_TOKEN',
+    allowedUsernames: ['neilkuan'],
+  },
+  releaseEveryCommit: true,
+  releaseToNpm: true,
+  python: {
+    distName: 'cdktf-gitlab-runner',
+    module: 'cdktf_gitlab_runner',
+  },
+  peerDeps: [
+    '@cdktf/provider-google',
+  ],
+  gitignore: [
+    '.DS_Store',
+    '**/*.js',
+    '**/*.d.ts',
+    'package-lock.json',
+    'yarn.lock',
+    '/test/__snapshots__/',
+    '.gen',
+    '.vscode',
+    'cdktf.out',
+    'terraform*',
+    '.terraform*',
+  ],
 });
 project.synth();

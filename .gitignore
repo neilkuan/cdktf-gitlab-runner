@@ -2,6 +2,7 @@
 !/.gitattributes
 !/.projen/tasks.json
 !/.projen/deps.json
+!/.github/workflows/auto-approve.yml
 !/.github/workflows/stale.yml
 !/package.json
 !/LICENSE
@@ -29,6 +30,16 @@ jspm_packages/
 *.tgz
 .yarn-integrity
 .cache
+.DS_Store
+**/*.js
+**/*.d.ts
+package-lock.json
+yarn.lock
+.gen
+.vscode
+cdktf.out
+terraform*
+.terraform*
 !/.projenrc.js
 /test-reports/
 junit.xml

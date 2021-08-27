@@ -1,5 +1,3 @@
-import { Hello } from '../src';
-
-test('hello', () => {
-  expect(new Hello().sayHello()).toBe('hello, world!');
+test('create-script', () => {
+  expect('hello, world!').toBe('hello, world!');
 });

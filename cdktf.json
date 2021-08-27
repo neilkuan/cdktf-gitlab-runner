@@ -1,0 +1,10 @@
+{
+  "language": "typescript",
+  "app": "node lib/integ-default.js",
+  "terraformProviders": [],
+  "terraformModules": [],
+  "context": {
+    "excludeStackIdFromLogicalIds": "true",
+    "allowSepCharsInLogicalIds": "true"
+  }
+}

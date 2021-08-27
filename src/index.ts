@@ -1,5 +1,2 @@
-export class Hello {
-  public sayHello() {
-    return 'hello, world!';
-  }
-}
+export * from './gitlab-runner-autoscaling';
+export * from './gitlab-runner-interfaces';

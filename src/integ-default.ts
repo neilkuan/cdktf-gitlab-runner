@@ -1,8 +1,3 @@
-# cdktf-gitlab-runner
-
-
-### Example
-```ts
 import * as gcp from '@cdktf/provider-google';
 import * as cdktf from 'cdktf';
 import { Construct } from 'constructs';
@@ -28,6 +23,5 @@ export class IntegDefaultStack extends cdktf.TerraformStack {
 
 
 const app = new cdktf.App();
-new IntegDefaultStack(app, 'gitlab-runner');
+new IntegDefaultStack(app, 'cloudrun-cdktf');
 app.synth();
-```

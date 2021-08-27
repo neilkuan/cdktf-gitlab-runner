@@ -1,6 +1,6 @@
 [![NPM version](https://badge.fury.io/js/cdktf-gitlab-runner.svg)](https://badge.fury.io/js/cdktf-gitlab-runner)
 [![PyPI version](https://badge.fury.io/py/cdktf-gitlab-runner.svg)](https://badge.fury.io/py/cdktf-gitlab-runner)
-![Release](https://github.com/neilkuan/cdktf-gitlab-runner/workflows/Release/badge.svg)
+![Release](https://github.com/neilkuan/cdktf-gitlab-runner/workflows/release/badge.svg)
 
 ![Downloads](https://img.shields.io/badge/-DOWNLOADS:-brightgreen?color=gray)
 ![npm](https://img.shields.io/npm/dt/cdktf-gitlab-runner?label=npm&color=orange)

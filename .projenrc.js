@@ -38,7 +38,7 @@ const project = new ConstructLibraryCdktf({
   peerDeps: [
     '@cdktf/provider-google',
   ],
-  minNodeVersion: '12.13.0',
+  minNodeVersion: '12.19.0',
   gitignore: [
     '.DS_Store',
     '**/*.js',

@@ -11,11 +11,18 @@
 Use CDK fo Terraform to create gitlab runner, and use [gitlab runner](https://gitlab.com/gitlab-org/gitlab-runner) to help you execute your Gitlab Pipeline Job.
 > GitLab Runner is the open source project that is used to run your CI/CD jobs and send the results back to GitLab. [(source repo)](https://gitlab.com/gitlab-org/gitlab-runner)
 
+### Init CDKTF Project
+```bash
+mkdir demo
+cd demo
+cdktf init --template typescript --local
+```
+
 ### Install `cdktf-gitlab-runner`
 ```bash
 yarn add cdktf-gitlab-runner
 or
-nom i cdktf-gitlab-runner
+npm i cdktf-gitlab-runner
 ```
 
 ### Example

@@ -112,12 +112,32 @@ Google Cloud Provider.
 
 ---
 
+##### `automaticRestart`<sup>Optional</sup> <a name="cdktf-gitlab-runner.GitlabRunnerAutoscalingProps.property.automaticRestart"></a>
+
+- *Type:* `boolean`
+- *Default:* false
+
+If true, automatically restart instances on maintenance events.
+
+See https://cloud.google.com/compute/docs/instances/live-migration#autorestart
+
+---
+
 ##### `computeNetwork`<sup>Optional</sup> <a name="cdktf-gitlab-runner.GitlabRunnerAutoscalingProps.property.computeNetwork"></a>
 
 - *Type:* [`@cdktf/provider-google.DataGoogleComputeNetwork`](#@cdktf/provider-google.DataGoogleComputeNetwork)
 - *Default:* A new VPC will be created.
 
 VPC for the Gitlab Runner .
+
+---
+
+##### `concurrent`<sup>Optional</sup> <a name="cdktf-gitlab-runner.GitlabRunnerAutoscalingProps.property.concurrent"></a>
+
+- *Type:* `number`
+- *Default:* 1
+
+gitlab runner run task concurrent at the same time.
 
 ---
 
@@ -150,21 +170,14 @@ more detail see https://docs.gitlab.com/runner/configuration/advanced-configurat
 
 ---
 
-##### `ebsSize`<sup>Optional</sup> <a name="cdktf-gitlab-runner.GitlabRunnerAutoscalingProps.property.ebsSize"></a>
-
-- *Type:* `number`
-- *Default:* ebsSize=60
-
-Gitlab Runner instance EBS size .
-
----
-
-##### `gitlabRunnerImage`<sup>Optional</sup> <a name="cdktf-gitlab-runner.GitlabRunnerAutoscalingProps.property.gitlabRunnerImage"></a>
+##### `downloadGitlabRunnerBinaryUrl`<sup>Optional</sup> <a name="cdktf-gitlab-runner.GitlabRunnerAutoscalingProps.property.downloadGitlabRunnerBinaryUrl"></a>
 
 - *Type:* `string`
-- *Default:* public.ecr.aws/gitlab/gitlab-runner:alpine
+- *Default:* "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64"
 
-Image URL of Gitlab Runner.
+The source URL used to install the gitlab-runner onto the VM host os.
+
+Passed to curl via cloud-config runcmd.
 
 ---
 
@@ -186,24 +199,6 @@ Runner default EC2 instance type.
 
 ---
 
-##### `maxCapacity`<sup>Optional</sup> <a name="cdktf-gitlab-runner.GitlabRunnerAutoscalingProps.property.maxCapacity"></a>
-
-- *Type:* `number`
-- *Default:* desiredCapacity
-
-Maximum capacity limit for autoscaling group.
-
----
-
-##### `minCapacity`<sup>Optional</sup> <a name="cdktf-gitlab-runner.GitlabRunnerAutoscalingProps.property.minCapacity"></a>
-
-- *Type:* `number`
-- *Default:* minCapacity: 1
-
-Minimum capacity limit for autoscaling group.
-
----
-
 ##### `networkTags`<sup>Optional</sup> <a name="cdktf-gitlab-runner.GitlabRunnerAutoscalingProps.property.networkTags"></a>
 
 - *Type:* `string`[]
@@ -212,9 +207,22 @@ Firewall rules for the Gitlab Runner.
 
 ---
 
+##### `preemptible`<sup>Optional</sup> <a name="cdktf-gitlab-runner.GitlabRunnerAutoscalingProps.property.preemptible"></a>
+
+- *Type:* `boolean`
+
+If true, create preemptible VM instances intended to reduce cost.
+
+Note, the MIG will recreate pre-empted instnaces.
+See https://cloud.google.com/compute/docs/instances/preemptible
+
+---
+
 ##### `serviceAccount`<sup>Optional</sup> <a name="cdktf-gitlab-runner.GitlabRunnerAutoscalingProps.property.serviceAccount"></a>
 
 - *Type:* [`@cdktf/provider-google.ComputeInstanceTemplateServiceAccount`](#@cdktf/provider-google.ComputeInstanceTemplateServiceAccount)
+
+The Service Account to be used by the Gitlab Runner.
 
 ---
 

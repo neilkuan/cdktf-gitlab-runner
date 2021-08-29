@@ -17,17 +17,6 @@ export interface GitlabRunnerAutoscalingProps extends ConstructOptions{
   readonly gitlabToken: string;
 
   /**
-   * Image URL of Gitlab Runner.
-   *
-   * @example
-   * new GitlabRunnerAutoscaling(stack, 'runner', { gitlabToken: 'GITLAB_TOKEN', gitlabRunnerImage: 'gitlab/gitlab-runner:alpine' });
-   *
-   * @default public.ecr.aws/gitlab/gitlab-runner:alpine
-   *
-   */
-  readonly gitlabRunnerImage?: string;
-
-  /**
    * Runner default EC2 instance type.
    *
    * @example
@@ -42,45 +31,16 @@ export interface GitlabRunnerAutoscalingProps extends ConstructOptions{
    * VPC for the Gitlab Runner .
    *
    * @example
-   * const newVpc = new Vpc(stack, 'NewVPC', {
-   *   cidr: '10.1.0.0/16',
-   *   maxAzs: 2,
-   *   subnetConfiguration: [{
-   *     cidrMask: 26,
-   *     name: 'RunnerVPC',
-   *     subnetType: SubnetType.PUBLIC,
-   *   }],
-   *   natGateways: 0,
+   * const computeNetwork = new gcp.ComputeNetwork(this, 'Network', {
+   *   name: 'cdktf-gitlabrunner-network',
    * });
    *
-   * new GitlabRunnerAutoscaling(stack, 'runner', { gitlabToken: 'GITLAB_TOKEN', vpc: newVpc });
+   * new GitlabRunnerAutoscaling(stack, 'runner', { gitlabToken: 'GITLAB_TOKEN', computeNetwork: computeNetwork });
    *
    * @default - A new VPC will be created.
    *
    */
   readonly computeNetwork?: gcp.DataGoogleComputeNetwork;
-
-  /**
-   * Minimum capacity limit for autoscaling group.
-   *
-   * @example
-   * new GitlabRunnerAutoscaling(stack, 'runner', { gitlabToken: 'GITLAB_TOKEN', minCapacity: 2 });
-   *
-   * @default - minCapacity: 1
-   *
-   */
-  readonly minCapacity?: number;
-
-  /**
-   * Maximum capacity limit for autoscaling group.
-   *
-   * @example
-   * new GitlabRunnerAutoscaling(stack, 'runner', { gitlabToken: 'GITLAB_TOKEN', maxCapacity: 4 });
-   *
-   * @default - desiredCapacity
-   *
-   */
-  readonly maxCapacity?: number;
 
   /**
    * Desired capacity limit for autoscaling group.
@@ -112,17 +72,6 @@ export interface GitlabRunnerAutoscalingProps extends ConstructOptions{
   readonly gitlabUrl?: string;
 
   /**
-   * Gitlab Runner instance EBS size .
-   *
-   * @example
-   * const runner = new GitlabRunnerAutoscaling(stack, 'runner', { gitlabToken: 'GITLAB_TOKEN', ebsSize: 100});
-   *
-   * @default - ebsSize=60
-   *
-   */
-  readonly ebsSize?: number;
-
-  /**
    * add another Gitlab Container Runner Docker Volumes Path at job runner runtime.
    *
    * more detail see https://docs.gitlab.com/runner/configuration/advanced-configuration.html#the-runnersdocker-section
@@ -148,7 +97,7 @@ export interface GitlabRunnerAutoscalingProps extends ConstructOptions{
   readonly defaultDiskSizeGb? : number;
 
   /**
-   *
+   * The Service Account to be used by the Gitlab Runner.
    */
   readonly serviceAccount?: gcp.ComputeInstanceTemplateServiceAccount;
 
@@ -156,6 +105,39 @@ export interface GitlabRunnerAutoscalingProps extends ConstructOptions{
    * Firewall rules for the Gitlab Runner.
    */
   readonly networkTags?: string[];
+
+  /**
+   * If true, create preemptible VM instances intended to reduce cost.
+   * Note, the MIG will recreate pre-empted instnaces.
+   * See https://cloud.google.com/compute/docs/instances/preemptible
+   *
+   * @deafult - true
+   */
+  readonly preemptible?: boolean;
+
+  /**
+   *
+   * If true, automatically restart instances on maintenance events.
+   * See https://cloud.google.com/compute/docs/instances/live-migration#autorestart
+   *
+   * @default - false
+   */
+  readonly automaticRestart?: boolean;
+
+  /**
+   * gitlab runner run task concurrent at the same time.
+   *
+   * @default - 1
+   */
+  readonly concurrent?: number;
+
+  /**
+   * The source URL used to install the gitlab-runner onto the VM host os.
+   * Passed to curl via cloud-config runcmd.
+   *
+   * @default - "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64"
+   */
+  readonly downloadGitlabRunnerBinaryUrl?: string;
 }
 
 export class GitlabRunnerAutoscaling extends Construct {
@@ -167,6 +149,10 @@ export class GitlabRunnerAutoscaling extends Construct {
       tags: ['gitlab', 'cdktf', 'runner'],
       gitlabUrl: 'https://gitlab.com/',
       gitlabRunnerImage: 'public.ecr.aws/gitlab/gitlab-runner:alpine',
+      preemptible: true,
+      automaticRestart: false,
+      concurrent: 1,
+      downloadGitlabRunnerBinaryUrl: 'https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64',
     };
     const runnerProps = { ...defaultProps, ...props };
     const network = runnerProps?.computeNetwork ?? new gcp.ComputeNetwork(this, 'Network', {
@@ -183,10 +169,6 @@ export class GitlabRunnerAutoscaling extends Construct {
       allow: [{
         protocol: 'tcp',
         ports: ['22'],
-      },
-      {
-        protocol: 'tcp',
-        ports: ['3389'],
       }],
       dependsOn: [network],
     });
@@ -213,16 +195,16 @@ export class GitlabRunnerAutoscaling extends Construct {
           autoDelete: true,
           boot: true,
           diskSizeGb: props.defaultDiskSizeGb ?? 60,
-          sourceImage: 'debian-cloud/debian-10',
+          sourceImage: 'cos-cloud/cos-stable',
         },
       ],
       serviceAccount: runnerProps.serviceAccount ? [runnerProps.serviceAccount] : [{ email: serviceAccount.email, scopes: ['cloud-platform'] }],
       canIpForward: true,
       description: 'cdktf-gitlabrunner-instance-template',
-      metadataStartupScript: this.createMetadataStartupScript(runnerProps).join('\n'),
       name: 'cdktf-gitlabrunner-instance-template',
       metadata: {
-        'shutdown-script': this.createShutdwonScript(),
+        'user-data': this.createMetadataStartupScript(runnerProps).join('\n'),
+        'shutdown-script': this.createShutdwonScript().join('\n'),
       },
       provider: runnerProps.provider,
       networkInterface: [
@@ -235,6 +217,11 @@ export class GitlabRunnerAutoscaling extends Construct {
       lifecycle: {
         createBeforeDestroy: true,
       },
+      scheduling:
+        [{
+          preemptible: runnerProps.preemptible,
+          automaticRestart: runnerProps.automaticRestart,
+        }],
     });
 
     new gcp.ComputeInstanceGroupManager(this, 'instance-group', {
@@ -276,27 +263,99 @@ export class GitlabRunnerAutoscaling extends Construct {
    */
   public createMetadataStartupScript(props: GitlabRunnerAutoscalingProps): string[] {
     return [
-      '#! /bin/bash',
-      'apt-get update -y',
-      'sleep 15 ',
-      'apt-get remove docker docker-engine docker.io containerd runc -y',
-      'sudo apt-get update -y',
-      'sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release -y',
-      'curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg',
-      'echo \"deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable\" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null',
-      'sudo apt-get update -y',
-      'sudo apt-get install docker-ce docker-ce-cli containerd.io -y',
-      'systemctl start docker && chmod 777 /var/run/docker.sock',
-      'systemctl restart docker && systemctl enable docker',
-      `docker run -d -v /.gitlab-runner:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock \
-      --name gitlab-runner-register ${props.gitlabRunnerImage} register --non-interactive --url ${props.gitlabUrl} --registration-token ${props.gitlabToken} \
-      --docker-pull-policy if-not-present ${this.dockerVolumesList(props?.dockerVolumes)} \
-      --executor docker --docker-image "alpine:latest" --description "A Runner on GCP GCE (${props.machineType})" \
-      --tag-list "${props.tags?.join(',')}" --docker-privileged`,
-      `sleep 2 && docker run --restart always -d -v /.gitlab-runner:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock --name gitlab-runner ${props.gitlabRunnerImage}`,
+      `Content-Type: multipart/mixed; boundary="MIMEBOUNDARY"
+MIME-Version: 1.0
+
+--MIMEBOUNDARY
+Content-Disposition: attachment; filename="init.cfg"
+Content-Transfer-Encoding: 7bit
+Content-Type: text/cloud-config
+Mime-Version: 1.0
+
+`, `# cloud-config
+users:
+  - name: gitlab-runner
+    shell: /bin/bash
+    uid: 2000
+    groups:
+      - docker
+
+write_files:
+  - path: /etc/gitlab-runner/config.toml
+    owner: root:root
+    permissions: '0644'
+    content: |
+      # Prometheus metrics at /metrics, also used for health checks.
+      listen_address = ":9252"
+      concurrent = ${props.concurrent}
+  - path: /var/lib/cloud/bin/firewall
+    permissions: 0755
+    owner: root
+    content: |
+      #! /bin/bash
+      iptables -w -A INPUT -p tcp --dport 9252 -j ACCEPT
+  - path: /etc/systemd/system/gitlab-runner-register.service
+    permissions: 0644
+    owner: root
+    content: |
+      [Unit]
+      Description=GitLab Runner Registration/Unregistration
+      ConditionFileIsExecutable=/var/lib/google/bin/gitlab-runner
+      After=syslog.target network-online.target
+      [Service]
+      Type=oneshot
+      RemainAfterExit=yes
+      ExecStart=/var/lib/google/bin/gitlab-runner register --non-interactive --url "${props.gitlabUrl}" --executor "docker" --registration-token ${props.gitlabToken} --docker-image alpine:latest --tag-list "${props.tags?.join(',')}" --locked="false" --access-level="not_protected" ${this.dockerVolumesList(props?.dockerVolumes)} --description "A Runner on GCP GCE (${props.machineType})" --docker-privileged
+      ExecStop=/var/lib/google/bin/gitlab-runner "unregister" "--config" "/etc/gitlab-runner/config.toml" "--all-runners"
+      [Install]
+      WantedBy=multi-user.target
+  - path: /etc/systemd/system/gitlab-runner.service
+    permissions: 0644
+    owner: root
+    content: |
+      [Unit]
+      Description=GitLab Runner
+      ConditionFileIsExecutable=/var/lib/google/bin/gitlab-runner
+      After=gitlab-runner-register.service syslog.target network-online.target
+      Requires=gitlab-runner-register.service
+      [Service]
+      StartLimitInterval=5
+      StartLimitBurst=10
+      ExecStart=/var/lib/google/bin/gitlab-runner "run" "--working-directory" "/home/gitlab-runner" "--config" "/etc/gitlab-runner/config.toml" "--service" "gitlab-runner" "--syslog" "--user" "gitlab-runner"
+      Restart=always
+      RestartSec=120
+      [Install]
+      WantedBy=multi-user.target
+  - path: /etc/systemd/system/firewall.service
+    permissions: 0644
+    owner: root
+    content: |
+      [Unit]
+      Description=Host firewall configuration
+      ConditionFileIsExecutable=/var/lib/cloud/bin/firewall
+      After=network-online.target
+      [Service]
+      ExecStart=/var/lib/cloud/bin/firewall
+      Type=oneshot
+      [Install]
+      WantedBy=multi-user.target
+
+runcmd:
+  - mkdir /var/lib/google/tmp
+  - mkdir /var/lib/google/bin
+  - curl -L --output /var/lib/google/tmp/gitlab-runner ${props.downloadGitlabRunnerBinaryUrl}
+  - install -o 0 -g 0 -m 0755 /var/lib/google/tmp/gitlab-runner /var/lib/google/bin/gitlab-runner
+  - systemctl daemon-reload
+  - systemctl start firewall.service
+  - systemctl start gitlab-runner-register.service
+  - systemctl start gitlab-runner.service
+  - chmod +x /var/run/docker.sock
+
+--MIMEBOUNDARY--
+`,
     ];
   }
-  private createShutdwonScript(): string {
-    return '#! /bin/bash \ndocker exec gitlab-runner gitlab-runner unregister --all-runners';
+  private createShutdwonScript(): string[] {
+    return ['#!/bin/bash', '/var/lib/google/bin/gitlab-runner unregister --all-runners'];
   }
 }

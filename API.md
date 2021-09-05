@@ -4,7 +4,7 @@
 
 ### GitlabRunnerAutoscaling <a name="cdktf-gitlab-runner.GitlabRunnerAutoscaling"></a>
 
-#### Initializer <a name="cdktf-gitlab-runner.GitlabRunnerAutoscaling.Initializer"></a>
+#### Initializers <a name="cdktf-gitlab-runner.GitlabRunnerAutoscaling.Initializer"></a>
 
 ```typescript
 import { GitlabRunnerAutoscaling } from 'cdktf-gitlab-runner'

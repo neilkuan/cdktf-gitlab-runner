@@ -163,6 +163,7 @@ export class GitlabRunnerAutoscaling extends Construct {
       displayName: 'Gitlab Runner Servuce Account',
     });
     new gcp.ComputeFirewall(this, 'GitlabRunnerFirewallRule', {
+      priority: 900,
       name: 'allow-ingress-from-iap',
       sourceRanges: ['35.235.240.0/20'],
       network: network.id,
@@ -170,6 +171,7 @@ export class GitlabRunnerAutoscaling extends Construct {
         protocol: 'tcp',
         ports: ['22'],
       }],
+      targetTags: ['runner-iap'],
       dependsOn: [network],
     });
 
@@ -179,12 +181,7 @@ export class GitlabRunnerAutoscaling extends Construct {
       members: [`serviceAccount:${serviceAccount.email}`],
     });
 
-    new gcp.ProjectIamBinding(this, 'IapIamBinding', {
-      provider: props.provider,
-      role: 'roles/iap.admin',
-      members: [`serviceAccount:${serviceAccount.email}`],
-    });
-    const networkTags = ['default-allow-ssh', 'allow-ingress-from-iap'];
+    const networkTags = ['runner-iap'];
     if (runnerProps.networkTags) {
       networkTags.push(...runnerProps.networkTags);
     }

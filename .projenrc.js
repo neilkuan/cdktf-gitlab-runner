@@ -1,5 +1,5 @@
 const { ConstructLibraryCdktf, DependenciesUpgradeMechanism } = require('projen');
-description = 'Construct a CDK tf';
+const description = 'The CDK for Terraform Construct for Gitlab Runner on GCP';
 const project = new ConstructLibraryCdktf({
   author: 'Neil Kuan',
   authorAddress: 'guan840912@gmail.com',
@@ -14,7 +14,7 @@ const project = new ConstructLibraryCdktf({
   description,
   catalog: {
     twitter: 'neil_kuan',
-    announce: false,
+    announce: true,
   },
   release: true,
   autoDetectBin: false,
@@ -38,7 +38,6 @@ const project = new ConstructLibraryCdktf({
   peerDeps: [
     '@cdktf/provider-google',
   ],
-  minNodeVersion: '12.19.0',
   gitignore: [
     '.DS_Store',
     '**/*.js',

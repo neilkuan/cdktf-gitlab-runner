@@ -95,19 +95,6 @@ import { GitlabRunnerAutoscalingProps } from 'cdktf-gitlab-runner'
 const gitlabRunnerAutoscalingProps: GitlabRunnerAutoscalingProps = { ... }
 ```
 
-##### `nodeFactory`<sup>Optional</sup> <a name="cdktf-gitlab-runner.GitlabRunnerAutoscalingProps.property.nodeFactory"></a>
-
-```typescript
-public readonly nodeFactory: INodeFactory;
-```
-
-- *Type:* [`constructs.INodeFactory`](#constructs.INodeFactory)
-- *Default:* the default `Node` is associated
-
-A factory for attaching `Node`s to the construct.
-
----
-
 ##### `gitlabToken`<sup>Required</sup> <a name="cdktf-gitlab-runner.GitlabRunnerAutoscalingProps.property.gitlabToken"></a>
 
 ```typescript

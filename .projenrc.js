@@ -3,7 +3,7 @@ const description = 'The CDK for Terraform Construct for Gitlab Runner on GCP';
 const project = new ConstructLibraryCdktf({
   author: 'Neil Kuan',
   authorAddress: 'guan840912@gmail.com',
-  cdktfVersion: '0.5.0',
+  cdktfVersion: '0.6.0',
   defaultReleaseBranch: 'main',
   name: 'cdktf-gitlab-runner',
   keywords: ['cdktf', 'gitlab', 'runner'],

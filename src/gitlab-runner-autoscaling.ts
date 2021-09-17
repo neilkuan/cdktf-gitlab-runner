@@ -1,9 +1,9 @@
 import * as gcp from '@cdktf/provider-google';
 import * as cdktf from 'cdktf';
-import { Construct, ConstructOptions } from 'constructs';
+import { Construct } from 'constructs';
 import { DockerVolumes } from './gitlab-runner-interfaces';
 
-export interface GitlabRunnerAutoscalingProps extends ConstructOptions{
+export interface GitlabRunnerAutoscalingProps {
   /**
    * Google Cloud Provider.
   */
@@ -142,7 +142,7 @@ export interface GitlabRunnerAutoscalingProps extends ConstructOptions{
 
 export class GitlabRunnerAutoscaling extends Construct {
   constructor(scope: Construct, id :string, props: GitlabRunnerAutoscalingProps) {
-    super(scope, id, props);
+    super(scope, id);
     const defaultProps = {
       desiredCapacity: 1,
       machineType: 'e2-medium',

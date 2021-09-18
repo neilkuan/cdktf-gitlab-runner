@@ -36,7 +36,7 @@ const project = new ConstructLibraryCdktf({
     module: 'cdktf_gitlab_runner',
   },
   peerDeps: [
-    '@cdktf/provider-google',
+    '@cdktf/provider-google@^0.3.8',
   ],
   gitignore: [
     '.DS_Store',

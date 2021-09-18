@@ -2,6 +2,7 @@
   "dependencies": [
     {
       "name": "@cdktf/provider-google",
+      "version": "0.3.8",
       "type": "build"
     },
     {
@@ -100,6 +101,7 @@
     },
     {
       "name": "@cdktf/provider-google",
+      "version": "^0.3.8",
       "type": "peer"
     },
     {

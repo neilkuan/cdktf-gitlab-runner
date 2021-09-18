@@ -40,6 +40,7 @@ yarn.lock
 cdktf.out
 terraform*
 .terraform*
+cdktf.json
 !/.projenrc.js
 /test-reports/
 junit.xml

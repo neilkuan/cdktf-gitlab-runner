@@ -309,7 +309,7 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-google@^0.3.8":
+"@cdktf/provider-google@0.3.8":
   version "0.3.8"
   resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-0.3.8.tgz#8b51fac332166a165f943f7f34127d22a82a855a"
   integrity sha512-9WZHqDmNNB3RTE8Ay8bhRjOiBywPzIGeHwck2/um3d/LHUFoqznKQwLf9aR720t37i00cXZM4oIf4dZgAto3MA==
@@ -1455,10 +1455,10 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
-cdktf@0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.6.2.tgz#4e7789d644ad042811c84e7b9ad027d67fd3c1fb"
-  integrity sha512-Kj4ZfWbhsBPPqG1oLIypCgblSVZI+ERpBsHIau6yEsbN+9Frj05PaznfrYwgvobrgNXmUwjkB3jsbqo0vFW9bQ==
+cdktf@0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.6.3.tgz#c30c85b920b67204ec5a9345d73668815aeff786"
+  integrity sha512-N0JxulsgED3uQQFjlKgl1sLzDtjX0sdDMpj9Zd8ejsH/JRhLDKOCqRWKukOFfW0X43TtU9r8SiLn3MagLmVG5w==
   dependencies:
     archiver "5.3.0"
 

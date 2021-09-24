@@ -39,7 +39,7 @@
     "@types/node": "^14.17.0",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
-    "cdktf": "0.6.2",
+    "cdktf": "0.6.3",
     "constructs": "10.0.0",
     "eslint": "^7.32.0",
     "eslint-import-resolver-node": "^0.3.6",
@@ -60,11 +60,8 @@
   },
   "peerDependencies": {
     "@cdktf/provider-google": "^0.3.8",
-    "cdktf": "^0.6.2",
+    "cdktf": "^0.6.3",
     "constructs": "^10"
-  },
-  "dependencies": {
-    "@cdktf/provider-google": "^0.3.8"
   },
   "bundledDependencies": [],
   "keywords": [

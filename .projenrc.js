@@ -32,6 +32,9 @@ const project = new ConstructLibraryCdktf({
     distName: 'cdktf-gitlab-runner',
     module: 'cdktf_gitlab_runner',
   },
+  deps: [
+    '@cdktf/provider-google',
+  ],
   peerDeps: [
     '@cdktf/provider-google',
   ],

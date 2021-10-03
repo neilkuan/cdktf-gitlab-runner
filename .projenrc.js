@@ -1,4 +1,4 @@
-const { ConstructLibraryCdktf, DependenciesUpgradeMechanism } = require('projen');
+const { ConstructLibraryCdktf } = require('projen');
 const description = 'The CDK for Terraform Construct for Gitlab Runner on GCP';
 const project = new ConstructLibraryCdktf({
   author: 'Neil Kuan',
@@ -15,13 +15,13 @@ const project = new ConstructLibraryCdktf({
   },
   release: true,
   autoDetectBin: false,
-  depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+  depsUpgradeOptions: {
     ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve'],
       secret: 'AUTOMATION_GITHUB_TOKEN',
     },
-  }),
+  },
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['neilkuan'],

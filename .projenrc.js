@@ -18,7 +18,7 @@ const project = new ConstructLibraryCdktf({
   depsUpgradeOptions: {
     ignoreProjen: false,
     workflowOptions: {
-      labels: ['auto-approve'],
+      labels: ['auto-approve', 'auto-merge'],
       secret: 'AUTOMATION_GITHUB_TOKEN',
     },
   },

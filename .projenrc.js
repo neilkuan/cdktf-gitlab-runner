@@ -6,7 +6,7 @@ const project = new ConstructLibraryCdktf({
   cdktfVersion: '0.6.3',
   defaultReleaseBranch: 'main',
   name: 'cdktf-gitlab-runner',
-  keywords: ['cdktf', 'gitlab', 'runner'],
+  keywords: ['cdktf', 'gitlab', 'runner', 'cdk'],
   repositoryUrl: 'https://github.com/neilkuan/cdktf-gitlab-runner.git',
   description,
   catalog: {

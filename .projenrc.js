@@ -28,7 +28,7 @@ const project = new ConstructLibraryCdktf({
   },
   releaseEveryCommit: true,
   releaseToNpm: true,
-  python: {
+  publishToPypi: {
     distName: 'cdktf-gitlab-runner',
     module: 'cdktf_gitlab_runner',
   },

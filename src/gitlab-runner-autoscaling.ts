@@ -195,7 +195,7 @@ export class GitlabRunnerAutoscaling extends Construct {
           sourceImage: 'cos-cloud/cos-stable',
         },
       ],
-      serviceAccount: runnerProps.serviceAccount ? [runnerProps.serviceAccount] : [{ email: serviceAccount.email, scopes: ['cloud-platform'] }],
+      serviceAccount: runnerProps.serviceAccount ? runnerProps.serviceAccount : { email: serviceAccount.email, scopes: ['cloud-platform'] },
       canIpForward: true,
       description: 'cdktf-gitlabrunner-instance-template',
       name: 'cdktf-gitlabrunner-instance-template',
@@ -215,10 +215,10 @@ export class GitlabRunnerAutoscaling extends Construct {
         createBeforeDestroy: true,
       },
       scheduling:
-        [{
+        {
           preemptible: runnerProps.preemptible,
           automaticRestart: runnerProps.automaticRestart,
-        }],
+        },
     });
 
     new gcp.ComputeInstanceGroupManager(this, 'instance-group', {

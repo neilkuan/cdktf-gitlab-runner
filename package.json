@@ -35,7 +35,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdktf/provider-google": "^0.4.24",
+    "@cdktf/provider-google": "^0.4.27",
     "@types/jest": "*",
     "@types/node": "^14.17.0",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -54,18 +54,18 @@
     "jsii-pacmak": "^1.46.0",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^11",
-    "projen": "^0.37.0",
+    "projen": "^0.37.1",
     "standard-version": "^9",
     "ts-jest": "^27.1.0",
     "typescript": "^4.5.2"
   },
   "peerDependencies": {
-    "@cdktf/provider-google": "^0.4.24",
+    "@cdktf/provider-google": "^0.4.27",
     "cdktf": "^0.8.0",
     "constructs": "^10"
   },
   "dependencies": {
-    "@cdktf/provider-google": "^0.4.24"
+    "@cdktf/provider-google": "^0.4.27"
   },
   "bundledDependencies": [],
   "keywords": [

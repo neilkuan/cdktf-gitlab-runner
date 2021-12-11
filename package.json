@@ -32,7 +32,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdktf/provider-google": "^0.4.53",
+    "@cdktf/provider-google": "^0.4.59",
     "@types/jest": "*",
     "@types/node": "^14.17.0",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -43,26 +43,26 @@
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.3",
-    "jest": "^27.4.3",
+    "jest": "^27.4.4",
     "jest-junit": "^13",
     "jsii": "^1.47.0",
     "jsii-diff": "^1.47.0",
-    "jsii-docgen": "^4.2.10",
+    "jsii-docgen": "^4.2.11",
     "jsii-pacmak": "^1.47.0",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^11",
-    "projen": "^0.40.1",
+    "projen": "^0.40.2",
     "standard-version": "^9",
     "ts-jest": "^27.1.1",
     "typescript": "^4.5.3"
   },
   "peerDependencies": {
-    "@cdktf/provider-google": "^0.4.53",
+    "@cdktf/provider-google": "^0.4.59",
     "cdktf": "^0.8.0",
     "constructs": "^10"
   },
   "dependencies": {
-    "@cdktf/provider-google": "^0.4.53"
+    "@cdktf/provider-google": "^0.4.59"
   },
   "bundledDependencies": [],
   "keywords": [

@@ -302,10 +302,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-google@^0.4.59":
-  version "0.4.59"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-0.4.59.tgz#b66adf4d5d50923b10afb179addb41af659e8236"
-  integrity sha512-OPlD9cohaXSxsUYPHLCK1toihlTxa8rn5roRb4X+0Ufe3JQQ+4/ecSnEY7d8VgMXtVmJdB8uZLqTP7Qc2HTFRg==
+"@cdktf/provider-google@^0.4.65":
+  version "0.4.65"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-0.4.65.tgz#f95569621333b85434df91627125a34204fad2d9"
+  integrity sha512-2FfTpjFICeBUcUXwke1CwXUWKxOX8XokoKjPxp8+6MPqyCXiu1t9TtWRn8cGdQLBPIkQZB22RC+WmVt/oy8+wQ==
 
 "@eslint/eslintrc@^1.0.5":
   version "1.0.5"
@@ -3965,10 +3965,10 @@ jsii-diff@^1.47.0:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii-docgen@^4.2.11:
-  version "4.2.11"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-4.2.11.tgz#c4609b82cef95456b6444decac2df760988db643"
-  integrity sha512-Fp3qhVOkuahxzGzTPyQG6CGAOFDMLILKQSnuByliCkQi/oSS3f9cBY5N0V7aZfCx0ovNzVxC75f6g7GbwVhYMw==
+jsii-docgen@^4.2.12:
+  version "4.2.12"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-4.2.12.tgz#c2387d78191d30d6863d125c710d668aa5f5a3e8"
+  integrity sha512-g5o6vkV8MH2B+a5f9nlKGZOx6B1aDPZKHJdzW4qCtygyy2ppf4/UYCiMXv3mQlQzY4LA3mNtb/oXUJsP8/9gEg==
   dependencies:
     "@jsii/spec" "^1.47.0"
     case "^1.6.3"
@@ -5103,10 +5103,10 @@ progress@^2.0.0, progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.40.2:
-  version "0.40.2"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.40.2.tgz#d5ebea7a604ef7afca0655c3b1c8451c564f8612"
-  integrity sha512-h6cnvRQHovnjlyJA6Rgzp+qd1F8SKusY8UVOxbwPy09CF39euxpAF8SZC++NuI9DK/AGo8P7AlHiKXRLEIqYUQ==
+projen@^0.40.3:
+  version "0.40.3"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.40.3.tgz#b9f1b470bc895f6bfca841cbc57f23c5eefa9411"
+  integrity sha512-w+vgC5vc35SONzeAB8g/z3pnBbCpTKSy6V9BEXrhfXvVOA/BNDL/0Xpu0YC/GTQSiICNZ5g1m/emUYvUgXThQQ==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"

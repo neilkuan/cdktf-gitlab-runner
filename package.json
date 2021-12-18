@@ -51,16 +51,16 @@
     "npm-check-updates": "^12",
     "projen": "^0.44.0",
     "standard-version": "^9",
-    "ts-jest": "^27.1.1",
+    "ts-jest": "^27.1.2",
     "typescript": "^4.5.4"
   },
   "peerDependencies": {
-    "@cdktf/provider-google": "^0.5.11",
+    "@cdktf/provider-google": "^0.5.23",
     "cdktf": "^0.8.3",
     "constructs": "^10"
   },
   "dependencies": {
-    "@cdktf/provider-google": "^0.5.11",
+    "@cdktf/provider-google": "^0.5.23",
     "constructs": "^10.0.0"
   },
   "bundledDependencies": [],

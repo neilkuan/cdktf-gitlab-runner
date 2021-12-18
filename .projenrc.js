@@ -26,6 +26,7 @@ const project = new cdktf.ConstructLibraryCdktf({
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['neilkuan'],
   },
+  workflowNodeVersion: '^14.17.0',
   releaseEveryCommit: true,
   releaseToNpm: true,
   publishToPypi: {

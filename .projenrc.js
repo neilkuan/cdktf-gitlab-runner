@@ -9,6 +9,9 @@ const project = new cdktf.ConstructLibraryCdktf({
   keywords: ['cdktf', 'gitlab', 'runner', 'cdk'],
   repositoryUrl: 'https://github.com/neilkuan/cdktf-gitlab-runner.git',
   description,
+  githubOptions: {
+    projenTokenSecret: 'AUTOMATION_GITHUB_TOKEN',
+  },
   catalog: {
     twitter: 'neil_kuan',
     announce: true,
@@ -19,7 +22,6 @@ const project = new cdktf.ConstructLibraryCdktf({
     ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
-      secret: 'AUTOMATION_GITHUB_TOKEN',
     },
   },
   autoApproveOptions: {

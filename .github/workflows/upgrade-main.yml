@@ -50,7 +50,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          token: ${{ secrets.PROJEN_GITHUB_TOKEN }}
+          token: ${{ secrets.AUTOMATION_GITHUB_TOKEN }}
           ref: main
       - name: Download patch
         uses: actions/download-artifact@v2

@@ -49,21 +49,21 @@
     "jest-junit": "^13",
     "jsii": "^1.52.1",
     "jsii-diff": "^1.52.1",
-    "jsii-docgen": "^4.2.36",
+    "jsii-docgen": "^4.2.38",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
-    "projen": "^0.50.24",
+    "projen": "^0.50.28",
     "standard-version": "^9",
     "ts-jest": "^27.1.2",
     "typescript": "^4.5.4"
   },
   "peerDependencies": {
-    "@cdktf/provider-google": "^0.5.129",
+    "@cdktf/provider-google": "^0.5.130",
     "cdktf": "^0.8.3",
     "constructs": "^10"
   },
   "dependencies": {
-    "@cdktf/provider-google": "^0.5.129",
+    "@cdktf/provider-google": "^0.5.130",
     "constructs": "^10.0.0"
   },
   "keywords": [

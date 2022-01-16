@@ -286,10 +286,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-google@^0.5.133":
-  version "0.5.133"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-0.5.133.tgz#f8cbf1e125526800b265ca6c4b3dc55a4d2586b4"
-  integrity sha512-Hd5VP7cztwhpA7gJYdsdUQyg82HDcMp5KWrs8Bqv4LFLjEBrqSVvEiw5IJPzY2Cx0jwo2UmpP9AiFvdOmhzdxg==
+"@cdktf/provider-google@^0.5.134":
+  version "0.5.134"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-0.5.134.tgz#3237ab87077db2a617dd7d96d201c9f47d9f6eaf"
+  integrity sha512-6wFyrNj0Td9Avo/FTCtKAwAZ2vT3KqCySOHoTjrB+Gct1J99XCU/w8S4BgJ4Ms1udL8Xkj5SRWa9tSO1RYXkRw==
 
 "@eslint/eslintrc@^1.0.5":
   version "1.0.5"
@@ -1588,9 +1588,9 @@ console-control-strings@^1.0.0, console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^10.0.0:
-  version "10.0.34"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.34.tgz#8ecf5f11d7d6751dc5f465accca3f1f4f7c3a038"
-  integrity sha512-Q999412/iOwASje+157vjNUmFpBr5ZMw+6RHrgezAM+4C7ITNecv3ICWayWDdN5te5ixUvUWPMmyLJbrZBZ3ag==
+  version "10.0.35"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.35.tgz#b9dd14e4f6a07492f50acda57cf9c016d2e70f39"
+  integrity sha512-cSEhC9I6L4S0CNDsheNZAgKufqssmugG1RlkGx7KcN2iykA3C8/EUyeMRVULqwyn0XfKypXd//KK11eaL3yXww==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -2258,9 +2258,9 @@ eslint-visitor-keys@^2.0.0:
   integrity sha512-0rSmRBzXgDzIsD6mGdJgevzgezI534Cer5L/vyMX0kHzT/jiB43jRhd9YUlMGYLQy2zprNmoT8qasCGtY+QaKw==
 
 eslint-visitor-keys@^3.0.0, eslint-visitor-keys@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.1.0.tgz#eee4acea891814cda67a7d8812d9647dd0179af2"
-  integrity sha512-yWJFpu4DtjsWKkt5GeNBBuZMlNcYVs6vRCLoCVEJrTjaSB6LC98gFipNK/erM2Heg/E8mIK+hXG/pJMLK+eRZA==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.2.0.tgz#6fbb166a6798ee5991358bc2daa1ba76cc1254a1"
+  integrity sha512-IOzT0X126zn7ALX0dwFiUQEdsfzrm4+ISsQS8nukaJXwEyYKRSnEIIDULYg1mCtGp7UUXgfGl7BIolXREQK+XQ==
 
 eslint@^8:
   version "8.6.0"
@@ -3799,10 +3799,10 @@ jsii-diff@^1.52.1:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii-docgen@^4.2.40:
-  version "4.2.40"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-4.2.40.tgz#3b2265df09e80dd1dedaf47b5f2fff09920e403a"
-  integrity sha512-zpoJHDomO/MHYqJ1NBlUBML1hCITQ6aosZFFGY2XLB+b13ouILj0wDcO0WXcaaKs/didB18sERF2hxHa9BWw3g==
+jsii-docgen@^4.2.41:
+  version "4.2.41"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-4.2.41.tgz#3adc328becb9cd2c5d543750fc1cba7bc81299a2"
+  integrity sha512-UfKqwDuqN/1jUbYEEl9JHQGdcJWr1sPsV/n0HpnHqsjfUVS48PlWK53Ipllc1ICXbuApx4yNgZec1sUadIEDqg==
   dependencies:
     "@jsii/spec" "^1.52.1"
     case "^1.6.3"
@@ -4881,10 +4881,10 @@ progress@^2.0.0, progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.50.31:
-  version "0.50.31"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.50.31.tgz#9d1ecacdbaf8f68b59aba0ceb013f4b9b67d00bf"
-  integrity sha512-+v9AuMFVjoeMB57k0Tu/LneD/OUkTQoFED1SOyPkIXPLKI9C8/Cnk9IoTd6u9RBrum0ULhsty3xb+NkWKWMbVw==
+projen@^0.50.32:
+  version "0.50.32"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.50.32.tgz#b4f88fb620256d4089d037692ffc6cee922d1794"
+  integrity sha512-iHJut5dw4HK5OVYWxIxe2V+eUWpLgxuYW8+iEXqL8atJloQjgeTELaPAHulZi4f1jr6Kw8U98Ozqlq0g3j486g==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -6042,9 +6042,9 @@ wordwrap@^1.0.0:
   integrity sha1-J1hIEIkUVqQXHI0CJkQa3pDLyus=
 
 workerpool@^6.1.5:
-  version "6.1.5"
-  resolved "https://registry.yarnpkg.com/workerpool/-/workerpool-6.1.5.tgz#0f7cf076b6215fd7e1da903ff6f22ddd1886b581"
-  integrity sha512-XdKkCK0Zqc6w3iTxLckiuJ81tiD/o5rBE/m+nXpRCB+/Sq4DqkfXZ/x0jW02DG1tGsfUGXbTJyZDP+eu67haSw==
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/workerpool/-/workerpool-6.2.0.tgz#827d93c9ba23ee2019c3ffaff5c27fccea289e8b"
+  integrity sha512-Rsk5qQHJ9eowMH28Jwhe8HEbmdYDX4lwoMWshiCXugjtHqMD9ZbiqSDLxcsfdqsETPzVUtX5s1Z5kStiIM6l4A==
 
 wrap-ansi@^7.0.0:
   version "7.0.0"

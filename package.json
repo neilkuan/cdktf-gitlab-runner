@@ -52,18 +52,18 @@
     "jsii-docgen": "^4.2.44",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
-    "projen": "^0.51.10",
+    "projen": "^0.51.11",
     "standard-version": "^9",
     "ts-jest": "^27.1.3",
     "typescript": "^4.5.5"
   },
   "peerDependencies": {
-    "@cdktf/provider-google": "^0.5.140",
+    "@cdktf/provider-google": "^0.5.141",
     "cdktf": "^0.8.3",
     "constructs": "^10"
   },
   "dependencies": {
-    "@cdktf/provider-google": "^0.5.140",
+    "@cdktf/provider-google": "^0.5.141",
     "constructs": "^10.0.0"
   },
   "keywords": [

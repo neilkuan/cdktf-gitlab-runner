@@ -286,10 +286,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-google@^0.6.40":
-  version "0.6.40"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-0.6.40.tgz#d159a4c454d0d11c0cda933433fcf12072e97a84"
-  integrity sha512-ijJ/ds4jqlL8Pqbop0vCXTrcLKomDDWX9bMDHTqYKXnsNzQZbN7kDAWJjv1GjnO/ehsCAjiRXw2XHuE2MzocaQ==
+"@cdktf/provider-google@^0.6.41":
+  version "0.6.41"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-0.6.41.tgz#0e1fbca2b9f039d9e76b6e85921308e283e158a2"
+  integrity sha512-k/eGOIjwuSjrGDrgtMWzlK/CycCxk5iF65aNvD1f1uI0Bksd98w1rd6rJKboq004/kbCkEih8OmZELLboeCDrQ==
 
 "@eslint/eslintrc@^1.2.0":
   version "1.2.0"
@@ -1261,12 +1261,12 @@ browser-process-hrtime@^1.0.0:
   integrity sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==
 
 browserslist@^4.17.5:
-  version "4.19.3"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.19.3.tgz#29b7caad327ecf2859485f696f9604214bedd383"
-  integrity sha512-XK3X4xtKJ+Txj8G5c30B4gsm71s69lqXlkYui4s6EkKxuv49qjYlY6oVd+IFJ73d4YymtM3+djvvt/R/iJwwDg==
+  version "4.20.0"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.20.0.tgz#35951e3541078c125d36df76056e94738a52ebe9"
+  integrity sha512-bnpOoa+DownbciXj0jVGENf8VYQnE2LNWomhYuCsMmmx9Jd9lwq0WXODuwpSsp8AVdKM2/HorrzxAfbKvWTByQ==
   dependencies:
-    caniuse-lite "^1.0.30001312"
-    electron-to-chromium "^1.4.71"
+    caniuse-lite "^1.0.30001313"
+    electron-to-chromium "^1.4.76"
     escalade "^3.1.1"
     node-releases "^2.0.2"
     picocolors "^1.0.0"
@@ -1377,7 +1377,7 @@ camelcase@^6.2.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-6.3.0.tgz#5685b95eb209ac9c0c177467778c9c84df58ba9a"
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
-caniuse-lite@^1.0.30001312:
+caniuse-lite@^1.0.30001313:
   version "1.0.30001313"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001313.tgz#a380b079db91621e1b7120895874e2fd62ed2e2f"
   integrity sha512-rI1UN0koZUiKINjysQDuRi2VeSCce3bYJNmDcj3PIKREiAmjakugBul1QSkg/fPrlULYl6oWfGg3PbgOSY9X4Q==
@@ -1592,9 +1592,9 @@ console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^10.0.0:
-  version "10.0.79"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.79.tgz#a389c15b6d6ac06f5a43679d32be80b10272806f"
-  integrity sha512-7HQzd4m8W7IQBryzuuHgBbYaPK/gKXOeSFYZad/ax1HVtN5hcTQccVtPMdeR04rzSsicnymr2llANYpK70CsHA==
+  version "10.0.80"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.80.tgz#5fef0a46ec8175d26d4430eea7f99ba36b88c69d"
+  integrity sha512-UIcVdxoQCOnrf/u7LK0y1sa2vFcbFYX4+gqoDVN1O3nXG6vpMCxLTi26O6KmtJQil+7W01pjvSIjWLK6V322Bg==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -2038,7 +2038,7 @@ duplexer3@^0.1.4:
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
-electron-to-chromium@^1.4.71:
+electron-to-chromium@^1.4.76:
   version "1.4.76"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.76.tgz#a0494baedaf51094b1c172999919becd9975a934"
   integrity sha512-3Vftv7cenJtQb+k00McEBZ2vVmZ/x+HEF7pcZONZIkOsESqAqVuACmBxMv0JhzX7u0YltU0vSqRqgBSTAhFUjA==
@@ -4895,10 +4895,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.52.56:
-  version "0.52.56"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.52.56.tgz#e24a966ba63fe32e85ab9169af7205dbeab055b5"
-  integrity sha512-8My7YSUMyona+2iO5QaKXBjYM9JomQB+OV00zlE0CuLDwQE5fuigkNJ3TE15prhVriv4jlNRl5V0tL1a2l3eVw==
+projen@^0.52.57:
+  version "0.52.57"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.52.57.tgz#e200d13502da4211f226cf99f90f71c8cfe2577e"
+  integrity sha512-5KIaaZv92xkAsCHdGQYZdCsJ5nv8o7R/0M1REvJUgbRJAmQSrK1/n1EwRmm2FKl5jYSOd4KYUay95S9pIW0DKw==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"

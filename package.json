@@ -51,20 +51,21 @@
     "jsii": "^1.55.0",
     "jsii-diff": "^1.55.0",
     "jsii-docgen": "^4.2.44",
+    "jsii-pacmak": "^1.55.0",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
-    "projen": "^0.52.70",
+    "projen": "^0.52.72",
     "standard-version": "^9",
     "ts-jest": "^27.1.3",
     "typescript": "^4.6.2"
   },
   "peerDependencies": {
-    "@cdktf/provider-google": "^0.6.49",
+    "@cdktf/provider-google": "^0.6.50",
     "cdktf": "0.9",
     "constructs": "^10.0.12"
   },
   "dependencies": {
-    "@cdktf/provider-google": "^0.6.49",
+    "@cdktf/provider-google": "^0.6.50",
     "constructs": "^10.0.0"
   },
   "keywords": [

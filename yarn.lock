@@ -286,10 +286,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-google@^0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-0.7.1.tgz#851f7751f7c0d5d8ee28a7443e2c4949195586aa"
-  integrity sha512-qfrmYIBGP216KRtyEHMJf3+sWEyJM3rGnAiKafQCz7T3ETKE27Of+aLXfiVvfvZw4VoHPP4yfGFep1ZekVXy2g==
+"@cdktf/provider-google@^0.7.2":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-0.7.2.tgz#f9de677a2f44878cfa8a8a1cfcd8ff2cca3f21d4"
+  integrity sha512-Sp76hL6g4e/8ulkCWGqUTNB4JlExr0HwzAyZ+qO9IrdESq9XEgzWU4qiCQhFVPRzlIWn6c50MCvhjwXTZ0/U1A==
 
 "@eslint/eslintrc@^1.2.1":
   version "1.2.1"
@@ -1608,9 +1608,9 @@ console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^10.0.0:
-  version "10.0.101"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.101.tgz#dbd4be995cebf117c69fbcbeb1257eb467c99aa8"
-  integrity sha512-phhf91qVARDXp8jx9r63lSY2OqXUlg5KXjFm5UHeXI86YMmUWYUl2GsFOimZ6AW7Hvkre/Gue7D3TrPD69kP0g==
+  version "10.0.102"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.102.tgz#9ce3986ecc4e175bf0dc16b1fc6fc2c371c5cfed"
+  integrity sha512-2qvF0e1g/IT3CRyc2MOYDWNLw/ARNByRDJWT+6uunXNq3emWIHzhehnBXtDsyqpZjP5FXmvHzKyVwcAviv0gVQ==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -2851,7 +2851,7 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
   integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
-hosted-git-info@^4.0.0, hosted-git-info@^4.0.1, hosted-git-info@^4.1.0:
+hosted-git-info@^4.0.0, hosted-git-info@^4.0.1:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-4.1.0.tgz#827b82867e9ff1c8d0c4d9d53880397d2c86d224"
   integrity sha512-kyCuEOWjJqZuDbRHzL8V93NzQhwIB71oFWSyzVo+KPZI+pnQPPxucdkrOZvkLRnrf5URsQM+IJ09Dw29cRALIA==
@@ -4493,9 +4493,9 @@ npm-bundled@^1.1.1, npm-bundled@^1.1.2:
     npm-normalize-package-bin "^1.0.1"
 
 npm-check-updates@^12:
-  version "12.5.4"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-12.5.4.tgz#c783b9ec6e27508a91c97d343f7714f1b5e43ec4"
-  integrity sha512-4+27zaTdieWgvPLaCZ/A6Q2WC1cYVcrc2SqVmLFYgkWBrKw1QkwpeV16FSvkFGZr3OdFyr7Dpjw8JRn4H2QxFw==
+  version "12.5.5"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-12.5.5.tgz#3b274a56cc8ad6e770010716c03bb680a967d9bd"
+  integrity sha512-7LH6KN6F1fZMtY4zNYAQPpJU1ToxZ6sSCxk948vrLIz97aNqmPLSX72MrmbOWwpyBgLCPbFJWY/k3zE18pmxfw==
   dependencies:
     chalk "^4.1.2"
     cint "^8.2.1"
@@ -4506,7 +4506,7 @@ npm-check-updates@^12:
     fp-and-or "^0.1.3"
     get-stdin "^8.0.0"
     globby "^11.0.4"
-    hosted-git-info "^4.1.0"
+    hosted-git-info "^5.0.0"
     json-parse-helpfulerror "^1.0.3"
     jsonlines "^0.1.1"
     libnpmconfig "^1.2.1"
@@ -4944,10 +4944,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.54.2:
-  version "0.54.2"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.54.2.tgz#a5d95c0f45a4f1a9acf218e68960843474541d42"
-  integrity sha512-c0h2ezfMv1jc2yyTs6Z92Pl8QXtPbeQoYmC9Eu5uZJRQ4HKSxlAXbOUTH2Idm7PJGmor0h4tyjC4SqxXbEhJNg==
+projen@^0.54.3:
+  version "0.54.3"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.54.3.tgz#787d024cf3890717e6eaa66142c0a612a6109c76"
+  integrity sha512-fnJojY/Xd+NINNUvkMyY9CohEX7aDNFOYKjJh9PjwC2JAcaXPAHkN1IaqhTnP4B24h2b9WWTJcVxhESwxdSPPg==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"

@@ -179,6 +179,9 @@ export class GitlabRunnerAutoscaling extends Construct {
       provider: runnerProps.provider,
       role: 'roles/compute.admin',
       members: [`serviceAccount:${serviceAccount.email}`],
+      project: `${
+        runnerProps.provider.project
+      }`,
     });
 
     const networkTags = ['runner-iap'];

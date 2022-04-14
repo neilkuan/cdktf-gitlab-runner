@@ -4563,9 +4563,9 @@ npm-pick-manifest@^7.0.0:
     semver "^7.3.5"
 
 npm-registry-fetch@^13.0.1:
-  version "13.1.0"
-  resolved "https://registry.yarnpkg.com/npm-registry-fetch/-/npm-registry-fetch-13.1.0.tgz#71bed52e30a4b27441604bbba79c7db8e0e34cb5"
-  integrity sha512-TIYL5X8CcwDhbFMXFDShNcpG6OMCYK6VzvSr6MUWP20tCU2DJ4ao2qQg3DT+3Pet8mO6/cgbZpon4LMh3duYLg==
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/npm-registry-fetch/-/npm-registry-fetch-13.1.1.tgz#26dc4b26d0a545886e807748032ba2aefaaae96b"
+  integrity sha512-5p8rwe6wQPLJ8dMqeTnA57Dp9Ox6GH9H60xkyJup07FmVlu3Mk7pf/kIIpl9gaN5bM8NM+UUx3emUWvDNTt39w==
   dependencies:
     make-fetch-happen "^10.0.6"
     minipass "^3.1.6"

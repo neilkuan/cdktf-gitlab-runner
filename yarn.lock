@@ -278,10 +278,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-google@^0.8.4":
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-0.8.4.tgz#9cf0cd933d806e8f8c7dd9a2c7ecaac08ea51c0a"
-  integrity sha512-D2ibhOxFMh2Uvaj8cR4rK/TICF4aja2o+tMhLjlo8JeLKNbJDEEmKPJyrkqDdpB8sBmsD/tz9IabaFK/h8Gr5A==
+"@cdktf/provider-google@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-0.8.5.tgz#9c742c3764fefdef389161194fe9a1b8d36df692"
+  integrity sha512-lB3npAAds5Z0mJPUludZ4XH6lbIgMvCBHi+RDz71aAzNcxYKkdxlzWhFGR1e8K5dJUlm2ukXbyENbg6r2oE6zg==
 
 "@eslint/eslintrc@^1.2.1":
   version "1.2.1"
@@ -1601,9 +1601,9 @@ console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^10.0.0:
-  version "10.0.115"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.115.tgz#f077848b33d001ac9e804111f5f8e1d0f6df1771"
-  integrity sha512-BZfiDjilEzfq+y8hNGRbh5yIYa+mK6ZAO172Q03pvN47Fe2a2PxzA1Y6dNCP+AKcajAiyzHjYg/hw98XheZh5A==
+  version "10.0.117"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.117.tgz#dfe1b8ebd0038f68796e4377111b8aa276d445eb"
+  integrity sha512-yYrv0jRBwrqd8Y2wJmB4ILuVnA2O811vzcbBnysxQSKZw2+n+lgJlGrpDRfEWwsy318OTSwa3BqEqBYztTpOqA==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -2051,9 +2051,9 @@ duplexer3@^0.1.4:
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
 electron-to-chromium@^1.4.84:
-  version "1.4.110"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.110.tgz#269208d7cf7e32123b1d87bf4e6e1fd9ac7ff51d"
-  integrity sha512-TvHZrkj9anfWkxgblHlNr4IMQdm2N6D0o8Wu1BDpSL/RKT4DHyUt/tvDFtApgZ+LGFL3U9EO4LRZ1eSlQ8xMYA==
+  version "1.4.111"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.111.tgz#897613f6504f3f17c9381c7499a635b413e4df4e"
+  integrity sha512-/s3+fwhKf1YK4k7btOImOzCQLpUjS6MaPf0ODTNuT4eTM1Bg4itBpLkydhOzJmpmH6Z9eXFyuuK5czsmzRzwtw==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -2533,9 +2533,9 @@ fs-constants@^1.0.0:
   integrity sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
 
 fs-extra@^10.0.0, fs-extra@^10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.1.tgz#27de43b4320e833f6867cc044bfce29fdf0ef3b8"
-  integrity sha512-NbdoVMZso2Lsrn/QwLXOy6rm0ufY2zEOKCDzJR/0kBsb0E6qed0P3iYK+Ath3BfvXEeu4JhEtXLgILx5psUfag==
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.1.0.tgz#02873cfbc4084dde127eaa5f9905eef2325d1abf"
+  integrity sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==
   dependencies:
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
@@ -4946,10 +4946,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.54.27:
-  version "0.54.27"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.54.27.tgz#90021d0bce53167fea006238e87f7b233a2ab84a"
-  integrity sha512-NRfkIzYIgb575cqT+u8BToRiIUBzF1Ky6qe+c5a4c5E8zDMaAaR2+aeMC7Cc5basFdqagSCiAW7yUTCv5v8Vjw==
+projen@^0.54.28:
+  version "0.54.28"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.54.28.tgz#ab3cba31410d431458346502d75a6bd9cee98744"
+  integrity sha512-I9hMZKrwPVYNu2IHVFelnaaTJGvAZh+banSClljRJ4baGadwXYqxsH2b54Pqn9FazIEgYX+i0eXI5pnQHx83IQ==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"

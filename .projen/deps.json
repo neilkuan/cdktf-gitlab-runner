@@ -21,7 +21,7 @@
     },
     {
       "name": "cdktf",
-      "version": "0.10.3",
+      "version": "0.11.0",
       "type": "build"
     },
     {
@@ -100,7 +100,7 @@
     },
     {
       "name": "cdktf",
-      "version": "0.10.3",
+      "version": "^0.11.0",
       "type": "peer"
     },
     {

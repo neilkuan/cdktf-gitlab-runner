@@ -48,24 +48,24 @@
     "eslint-plugin-import": "^2.26.0",
     "jest": "^27",
     "jest-junit": "^13",
-    "jsii": "^1.60.1",
-    "jsii-diff": "^1.60.1",
+    "jsii": "^1.61.0",
+    "jsii-diff": "^1.61.0",
     "jsii-docgen": "^4.2.44",
-    "jsii-pacmak": "^1.60.1",
+    "jsii-pacmak": "^1.61.0",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
-    "projen": "^0.58.14",
+    "projen": "^0.58.15",
     "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "^4.7.3"
   },
   "peerDependencies": {
-    "@cdktf/provider-google": "^0.9.27",
+    "@cdktf/provider-google": "^0.9.29",
     "cdktf": "^0.11.0",
     "constructs": "^10.0.12"
   },
   "dependencies": {
-    "@cdktf/provider-google": "^0.9.27",
+    "@cdktf/provider-google": "^0.9.29",
     "constructs": "^10.0.0"
   },
   "keywords": [

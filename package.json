@@ -57,15 +57,15 @@
     "projen": "^0.58.15",
     "standard-version": "^9",
     "ts-jest": "^27",
-    "typescript": "^4.7.3"
+    "typescript": "^4.7.4"
   },
   "peerDependencies": {
-    "@cdktf/provider-google": "^0.9.29",
+    "@cdktf/provider-google": "^0.9.30",
     "cdktf": "^0.11.0",
     "constructs": "^10.0.12"
   },
   "dependencies": {
-    "@cdktf/provider-google": "^0.9.29",
+    "@cdktf/provider-google": "^0.9.30",
     "constructs": "^10.0.0"
   },
   "keywords": [

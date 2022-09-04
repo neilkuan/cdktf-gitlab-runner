@@ -60,6 +60,7 @@ const project = new cdktf.ConstructLibraryCdktf({
 
 project.package.addField('resolutions', {
   '@babel/core': '7.16.12',
+  'got': '12.3.0',
 });
 
 project.synth();

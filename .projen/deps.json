@@ -90,6 +90,7 @@
     },
     {
       "name": "typescript",
+      "version": "^4.9",
       "type": "build"
     },
     {

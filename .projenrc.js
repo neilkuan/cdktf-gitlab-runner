@@ -56,11 +56,7 @@ const project = new cdktf.ConstructLibraryCdktf({
     '.terraform*',
     'cdktf.json',
   ],
-});
-
-project.package.addField('resolutions', {
-  '@babel/core': '7.16.12',
-  'got': '12.3.0',
+  typescriptVersion: '^4.9',
 });
 
 project.synth();

@@ -21,11 +21,6 @@
       "type": "build"
     },
     {
-      "name": "cdktf",
-      "version": "0.11.0",
-      "type": "build"
-    },
-    {
       "name": "eslint-import-resolver-node",
       "type": "build"
     },

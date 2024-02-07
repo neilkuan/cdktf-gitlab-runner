@@ -7,7 +7,7 @@ export interface GitlabRunnerAutoscalingProps {
   /**
    * Google Cloud Provider.
   */
-  readonly provider: gcp.GoogleProvider;
+  readonly provider: gcp.provider.GoogleProvider;
   /**
    * Gitlab token.
    *
@@ -40,7 +40,7 @@ export interface GitlabRunnerAutoscalingProps {
    * @default - A new VPC will be created.
    *
    */
-  readonly computeNetwork?: gcp.DataGoogleComputeNetwork;
+  readonly computeNetwork?: gcp.dataGoogleComputeNetwork.DataGoogleComputeNetwork;
 
   /**
    * Desired capacity limit for autoscaling group.
@@ -99,7 +99,7 @@ export interface GitlabRunnerAutoscalingProps {
   /**
    * The Service Account to be used by the Gitlab Runner.
    */
-  readonly serviceAccount?: gcp.ComputeInstanceTemplateServiceAccount;
+  readonly serviceAccount?: gcp.computeInstanceTemplate.ComputeInstanceTemplateServiceAccount;
 
   /**
    * Firewall rules for the Gitlab Runner.
@@ -155,14 +155,14 @@ export class GitlabRunnerAutoscaling extends Construct {
       downloadGitlabRunnerBinaryUrl: 'https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64',
     };
     const runnerProps = { ...defaultProps, ...props };
-    const network = runnerProps?.computeNetwork ?? new gcp.ComputeNetwork(this, 'Network', {
+    const network = runnerProps?.computeNetwork ?? new gcp.computeNetwork.ComputeNetwork(this, 'Network', {
       name: 'cdktf-gitlabrunner-network',
     });
-    const serviceAccount = new gcp.ServiceAccount(this, 'ServiceAccount', {
+    const serviceAccount = new gcp.serviceAccount.ServiceAccount(this, 'ServiceAccount', {
       accountId: 'gitlab-runner-sa',
       displayName: 'Gitlab Runner Servuce Account',
     });
-    new gcp.ComputeFirewall(this, 'GitlabRunnerFirewallRule', {
+    new gcp.computeFirewall.ComputeFirewall(this, 'GitlabRunnerFirewallRule', {
       priority: 900,
       name: 'allow-ingress-from-iap',
       sourceRanges: ['35.235.240.0/20'],
@@ -175,7 +175,7 @@ export class GitlabRunnerAutoscaling extends Construct {
       dependsOn: [network],
     });
 
-    new gcp.ProjectIamBinding(this, 'ComputeIamBinding', {
+    new gcp.projectIamBinding.ProjectIamBinding(this, 'ComputeIamBinding', {
       provider: runnerProps.provider,
       role: 'roles/compute.admin',
       members: [`serviceAccount:${serviceAccount.email}`],
@@ -188,7 +188,7 @@ export class GitlabRunnerAutoscaling extends Construct {
     if (runnerProps.networkTags) {
       networkTags.push(...runnerProps.networkTags);
     }
-    const compute_template = new gcp.ComputeInstanceTemplate(this, 'cdktf-gitlabrunner-instance-template', {
+    const compute_template = new gcp.computeInstanceTemplate.ComputeInstanceTemplate(this, 'cdktf-gitlabrunner-instance-template', {
       machineType: runnerProps.machineType,
       disk: [
         {
@@ -224,7 +224,7 @@ export class GitlabRunnerAutoscaling extends Construct {
         },
     });
 
-    new gcp.ComputeInstanceGroupManager(this, 'instance-group', {
+    new gcp.computeInstanceGroupManager.ComputeInstanceGroupManager(this, 'instance-group', {
       provider: runnerProps.provider,
       name: 'cdktf-gitlabrunner-instance-group',
       baseInstanceName: 'scaling-gitlab-runner',

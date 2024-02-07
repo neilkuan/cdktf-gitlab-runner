@@ -123,9 +123,9 @@ const gitlabRunnerAutoscalingProps: GitlabRunnerAutoscalingProps = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | [`gitlabToken`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertygitlabtoken)<span title="Required">*</span> | `string` | Gitlab token. |
-| [`provider`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertyprovider)<span title="Required">*</span> | [`@cdktf/provider-google.GoogleProvider`](#@cdktf/provider-google.GoogleProvider) | Google Cloud Provider. |
+| [`provider`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertyprovider)<span title="Required">*</span> | [`@cdktf/provider-google.provider.GoogleProvider`](#@cdktf/provider-google.provider.GoogleProvider) | Google Cloud Provider. |
 | [`automaticRestart`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertyautomaticrestart) | `boolean` | If true, automatically restart instances on maintenance events. |
-| [`computeNetwork`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertycomputenetwork) | [`@cdktf/provider-google.DataGoogleComputeNetwork`](#@cdktf/provider-google.DataGoogleComputeNetwork) | VPC for the Gitlab Runner . |
+| [`computeNetwork`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertycomputenetwork) | [`@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork`](#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork) | VPC for the Gitlab Runner . |
 | [`concurrent`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertyconcurrent) | `number` | gitlab runner run task concurrent at the same time. |
 | [`defaultDiskSizeGb`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertydefaultdisksizegb) | `number` | Gitlab Runner instance Disk size. |
 | [`desiredCapacity`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertydesiredcapacity) | `number` | Desired capacity limit for autoscaling group. |
@@ -135,7 +135,7 @@ const gitlabRunnerAutoscalingProps: GitlabRunnerAutoscalingProps = { ... }
 | [`machineType`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertymachinetype) | `string` | Runner default EC2 instance type. |
 | [`networkTags`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertynetworktags) | `string`[] | Firewall rules for the Gitlab Runner. |
 | [`preemptible`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertypreemptible) | `boolean` | If true, create preemptible VM instances intended to reduce cost. |
-| [`serviceAccount`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertyserviceaccount) | [`@cdktf/provider-google.ComputeInstanceTemplateServiceAccount`](#@cdktf/provider-google.ComputeInstanceTemplateServiceAccount) | The Service Account to be used by the Gitlab Runner. |
+| [`serviceAccount`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertyserviceaccount) | [`@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateServiceAccount`](#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateServiceAccount) | The Service Account to be used by the Gitlab Runner. |
 | [`tags`](#cdktfgitlabrunnergitlabrunnerautoscalingpropspropertytags) | `string`[] | tags for the runner. |
 
 ---
@@ -158,7 +158,7 @@ Gitlab token.
 public readonly provider: GoogleProvider;
 ```
 
-- *Type:* [`@cdktf/provider-google.GoogleProvider`](#@cdktf/provider-google.GoogleProvider)
+- *Type:* [`@cdktf/provider-google.provider.GoogleProvider`](#@cdktf/provider-google.provider.GoogleProvider)
 
 Google Cloud Provider.
 
@@ -185,7 +185,7 @@ See https://cloud.google.com/compute/docs/instances/live-migration#autorestart
 public readonly computeNetwork: DataGoogleComputeNetwork;
 ```
 
-- *Type:* [`@cdktf/provider-google.DataGoogleComputeNetwork`](#@cdktf/provider-google.DataGoogleComputeNetwork)
+- *Type:* [`@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork`](#@cdktf/provider-google.dataGoogleComputeNetwork.DataGoogleComputeNetwork)
 - *Default:* A new VPC will be created.
 
 VPC for the Gitlab Runner .
@@ -319,7 +319,7 @@ Note, the MIG will recreate pre-empted instnaces. See https://cloud.google.com/c
 public readonly serviceAccount: ComputeInstanceTemplateServiceAccount;
 ```
 
-- *Type:* [`@cdktf/provider-google.ComputeInstanceTemplateServiceAccount`](#@cdktf/provider-google.ComputeInstanceTemplateServiceAccount)
+- *Type:* [`@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateServiceAccount`](#@cdktf/provider-google.computeInstanceTemplate.ComputeInstanceTemplateServiceAccount)
 
 The Service Account to be used by the Gitlab Runner.
 

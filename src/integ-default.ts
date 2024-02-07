@@ -9,7 +9,7 @@ export class IntegDefaultStack extends cdktf.TerraformStack {
     super(scope, id);
     const local = 'asia-east1';
     const projectId = `${process.env.PROJECT_ID}`;
-    const provider = new gcp.GoogleProvider(this, 'GoogleAuth', {
+    const provider = new gcp.provider.GoogleProvider(this, 'GoogleAuth', {
       region: local,
       zone: local+'-c',
       project: projectId,

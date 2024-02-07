@@ -3,7 +3,7 @@ const description = 'The CDK for Terraform Construct for Gitlab Runner on GCP';
 const project = new cdktf.ConstructLibraryCdktf({
   author: 'Neil Kuan',
   authorAddress: 'guan840912@gmail.com',
-  cdktfVersion: '^0.11.0',
+  cdktfVersion: '^0.20',
   defaultReleaseBranch: 'main',
   name: 'cdktf-gitlab-runner',
   keywords: ['cdktf', 'gitlab', 'runner', 'cdk'],
@@ -28,7 +28,6 @@ const project = new cdktf.ConstructLibraryCdktf({
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['neilkuan'],
   },
-  workflowNodeVersion: '^16',
   releaseEveryCommit: true,
   releaseToNpm: true,
   publishToPypi: {
@@ -36,11 +35,11 @@ const project = new cdktf.ConstructLibraryCdktf({
     module: 'cdktf_gitlab_runner',
   },
   deps: [
-    '@cdktf/provider-google',
-    'constructs@^10.0.0',
+    '@cdktf/provider-google@^13',
+    'constructs@^10.0.12',
   ],
   peerDeps: [
-    '@cdktf/provider-google',
+    '@cdktf/provider-google@^13',
   ],
   gitignore: [
     '.DS_Store',
@@ -56,7 +55,14 @@ const project = new cdktf.ConstructLibraryCdktf({
     '.terraform*',
     'cdktf.json',
   ],
-  typescriptVersion: '^4.9',
+  devDeps: [
+    'ts-jest@29.1.2',
+    'jsii-rosetta@5.0.x',
+  ],
+  minNodeVersion: '20.10.0',
+  workflowNodeVersion: '20.10.0',
+  typescriptVersion: '^5',
+  jsiiVersion: '5.3.x',
 });
 
 project.synth();

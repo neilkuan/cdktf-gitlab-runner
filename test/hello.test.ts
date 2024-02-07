@@ -11,7 +11,7 @@ describe('Unit testing using snapshots', () => {
       Testing.synthScope(() => {
         const local = 'asia-east1';
         const projectId = `${process.env.PROJECT_ID}`;
-        const provider = new gcp.GoogleProvider(stack, 'GoogleAuth', {
+        const provider = new gcp.provider.GoogleProvider(stack, 'GoogleAuth', {
           region: local,
           zone: local+'-c',
           project: projectId,

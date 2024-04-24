@@ -297,9 +297,9 @@
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
 "@cdktf/provider-google@^13":
-  version "13.14.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-13.14.0.tgz#f06e67675d9087f066b1d682e95fba68c995609b"
-  integrity sha512-6WmAYjt0A97Ee/itH74S9pu73TO23xyoLu8fPuYiOe2rrqk6PuV2oul9GbJ47KDDlbVVbVll6fH//j0TPz4OxA==
+  version "13.15.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-13.15.0.tgz#181f4410ffc3c8d7457ebaf990f1563782e86174"
+  integrity sha512-jMS3mWjcT6o/G0ohYtV8zOaDr0FuBBhMzVKXPqZGc18zqiX2m7NEMeeSj2AislI37QydKWbgus4w4myhRpBaAQ==
 
 "@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.4.0":
   version "4.4.0"
@@ -1971,9 +1971,9 @@ downlevel-dts@^0.11.0:
     typescript next
 
 electron-to-chromium@^1.4.668:
-  version "1.4.746"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.746.tgz#787213e75f6c7bccb55dfe8b68170555c548d093"
-  integrity sha512-jeWaIta2rIG2FzHaYIhSuVWqC6KJYo7oSBX4Jv7g+aVujKztfvdpf+n6MGwZdC5hQXbax4nntykLH2juIQrfPg==
+  version "1.4.747"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.747.tgz#e37fa5b7b7e4c22607c5f59b5cf78f947266e77d"
+  integrity sha512-+FnSWZIAvFHbsNVmUxhEqWiaOiPMcfum1GQzlWCg/wLigVtshOsjXHyEFfmt6cFK6+HkS3QOJBv6/3OPumbBfw==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -5276,9 +5276,9 @@ typescript@^5:
   integrity sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==
 
 typescript@next:
-  version "5.5.0-dev.20240422"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.0-dev.20240422.tgz#cf05ccca929fde90b6ff6923edff6322862547d6"
-  integrity sha512-GKfP7cqp5Rq/z6xNYZ6u6XfS4I0K3h8tw3MRKkttEkLyEWBxYS141wOr1WBcUYfvB1F5Luo/cTd7iZnySH3bIg==
+  version "5.5.0-dev.20240423"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.0-dev.20240423.tgz#eace2402fc7e4428b3b1e1a97d34518401dd35dc"
+  integrity sha512-4/ZRU+Mu0ckZV71Bb5ikMBYPAVD6zqGoNQ7ETFezcOIiv3dUxAwWVicdPKZLqokV7NRbtDLuSj+tyVZJN/jEzw==
 
 typescript@~3.9.10:
   version "3.9.10"

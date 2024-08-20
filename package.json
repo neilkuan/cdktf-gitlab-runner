@@ -41,7 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^7",
     "@typescript-eslint/parser": "^7",
     "cdktf": "0.20.0",
-    "constructs": "^10.0.0",
+    "constructs": "10.3.0",
     "eslint": "^8",
     "eslint-import-resolver-typescript": "^2.7.1",
     "eslint-plugin-import": "^2.29.1",
@@ -52,7 +52,7 @@
     "jsii-docgen": "^4.2.44",
     "jsii-pacmak": "^1.102.0",
     "jsii-rosetta": "5.3.x",
-    "projen": "^0.85.0",
+    "projen": "^0.85.2",
     "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "^5"

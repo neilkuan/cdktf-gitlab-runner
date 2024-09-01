@@ -285,9 +285,9 @@
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
 "@cdktf/provider-google@^13":
-  version "13.32.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-13.32.0.tgz#ebf06d13571c9e4e3db8623bf2cfc8f9a6df0707"
-  integrity sha512-t4Uh31grrZvKtG6i23oQO/4Xx3G7zOiaolRQIoahNAD0fx+TJhI1lNS1V5/v5d9RiZGoPcS+owtOc5gSPfG6kg==
+  version "13.32.1"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-google/-/provider-google-13.32.1.tgz#8d6dc91c4123ab98052288fc1f4c68fb3c8fd121"
+  integrity sha512-9RSDjya0+YnRqLD+PD/X8ebCLJf1GdpZCKrwvxL5UTf/ht8AL6uHRUET1dTDmvocDuAEdaoYh4bjdLlTBi6/mQ==
 
 "@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.4.0":
   version "4.4.0"
@@ -5271,9 +5271,9 @@ typescript@^5:
   integrity sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==
 
 typescript@next:
-  version "5.7.0-dev.20240830"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.7.0-dev.20240830.tgz#db968c5c8a828ce07bb1afa67c49367267ab5f3f"
-  integrity sha512-9VbtIHvcw8LBJ3lcS+ovk4uraOFXpMGi+b3V9BOykkfszyAschMieLZgAV0YN/yvELk84QrWig1mZV8uBKS+RA==
+  version "5.7.0-dev.20240831"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.7.0-dev.20240831.tgz#d1e60a2bc69725f54c8f59c0147ecda7c36aa5ae"
+  integrity sha512-HgT3X89xaN202M8qtCeHPOlTCh43pKZTqFJgu68d9UPZMsWgbR/izfbMGSObmZ/iw2B5NrrTMCotvQVamYMh9A==
 
 typescript@~5.3:
   version "5.3.3"

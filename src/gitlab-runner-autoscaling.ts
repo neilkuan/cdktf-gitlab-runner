@@ -94,7 +94,7 @@ export interface GitlabRunnerAutoscalingProps {
    *
    * @default - 60 GB.
   */
-  readonly defaultDiskSizeGb? : number;
+  readonly defaultDiskSizeGb?: number;
 
   /**
    * The Service Account to be used by the Gitlab Runner.

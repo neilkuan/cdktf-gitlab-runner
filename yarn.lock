@@ -1320,9 +1320,9 @@ base64-js@^1.3.1:
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
 baseline-browser-mapping@^2.8.19:
-  version "2.8.22"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.8.22.tgz#9d98661721ebe0812def25858f4cb2561820d2e6"
-  integrity sha512-/tk9kky/d8T8CTXIQYASLyhAxR5VwL3zct1oAoVTaOUHwrmsGnfbRwNdEq+vOl2BN8i3PcDdP0o4Q+jjKQoFbQ==
+  version "2.8.23"
+  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.8.23.tgz#cd43e17eff5cbfb67c92153e7fe856cf6d426421"
+  integrity sha512-616V5YX4bepJFzNyOfce5Fa8fDJMfoxzOIzDCZwaGL8MKVpFrXqfNUoIpRn9YMI5pXf/VKgzjB4htFMsFKKdiQ==
 
 bl@^4.0.3:
   version "4.1.0"
@@ -5661,9 +5661,9 @@ typescript@^5:
   integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
 
 typescript@next:
-  version "6.0.0-dev.20251031"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.0-dev.20251031.tgz#93ca74fac5a69d1baa95426df756ac2c30ded18f"
-  integrity sha512-gJEMFg3G1A8sTe9zdcp2FxWDA09tpK5dLixOlltCgqvhXtv7a8tXHGJBjGS/k5IE0VaehoB7i+CdWfqo49I3WA==
+  version "6.0.0-dev.20251101"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.0-dev.20251101.tgz#e86939da84d80a034fe9c90aa60f9aef1ce6817b"
+  integrity sha512-7yQlEGqglItGj0CNlMeHBksCgwUPF974EvJ7Vu7LKgTmgkTapWq2l7SrkYgZmJKCih5q8/1Av8/tM+qhfSXXXA==
 
 typescript@~5.3:
   version "5.3.3"
